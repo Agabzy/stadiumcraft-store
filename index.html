@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Illuminated Stadium Coffee Table | StadiumCraft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Moving announcement marquee -->
+    <div class="marquee" role="note" aria-label="Store announcement">
+        <div class="marquee__track">
+            <span class="marquee__item">Over 2,000 happy customers</span>
+            <span class="marquee__dot">•</span>
+            <span class="marquee__item">Fast worldwide delivery</span>
+            <span class="marquee__dot">•</span>
+            <span class="marquee__item">Tap Order Now below to get yours</span>
+            <span class="marquee__dot">•</span>
+            <span class="marquee__item">Over 2,000 happy customers</span>
+            <span class="marquee__dot">•</span>
+            <span class="marquee__item">Fast worldwide delivery</span>
+            <span class="marquee__dot">•</span>
+            <span class="marquee__item">Tap Order Now below to get yours</span>
+            <span class="marquee__dot">•</span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div class="logo">Stadium<span>Craft</span></div>
+            <a class="header-order-link js-order-link" href="https://t.me/yourchannelusername" target="_blank" rel="noopener">Order Now</a>
+        </div>
+    </header>
+
+<main class="product">
+
+    <!-- Gallery -->
+    <section class="gallery" aria-label="Product images">
+        <div class="gallery__stage">
+            <button class="gallery__nav gallery__nav--prev" id="galPrev" aria-label="Previous club">‹</button>
+            <img id="galMainImg" class="gallery__main-img" src="" alt="">
+            <button class="gallery__nav gallery__nav--next" id="galNext" aria-label="Next club">›</button>
+            <span class="gallery__badge">Bestseller</span>
+        </div>
+        
+        <!-- Thumbnail carousel with scroll arrows -->
+        <div class="gallery__thumbs-wrap">
+            <button class="gallery__thumbs-nav gallery__thumbs-nav--prev" id="thumbPrev" aria-label="Scroll thumbnails left">‹</button>
+            <div class="gallery__thumbs" id="galThumbs"></div>
+            <button class="gallery__thumbs-nav gallery__thumbs-nav--next" id="thumbNext" aria-label="Scroll thumbnails right">›</button>
+        </div>
+    </section>
+
+    <!-- Product info -->
+    <section class="info">
+        <p class="info__eyebrow">3D Illuminated Football Stadium Coffee Table</p>
+        <h1 class="info__title" id="productTitle">Premier League Edition</h1>
+
+        <div class="info__rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="rating-text">4.84/5 · 2,150+ reviews</span>
+        </div>
+
+        <p class="info__social-proof">Over 2,000 sold in the last 30 days</p>
+
+        <div class="price-row">
+            <span class="price-row__current" id="priceCurrent">$149.99</span>
+            <span class="price-row__compare" id="priceCompare">$299.99</span>
+            <span class="price-row__save" id="priceSave">Save 50%</span>
+        </div>
+
+        <!-- Standalone Order button, right after price (also the mobile-visible one) -->
+        <a class="btn-order js-order-link btn-order--mobile-visible" href="https://t.me/stadiumcraftreviews" target="_blank" rel="noopener">
+            Order Now
+        </a>
+
+        <!-- Info message block, below the button -->
+        <div class="club-cta">
+            <p class="club-cta__text">
+                <strong>All clubs available.</strong> Click <em>Order Now</em> for your specific club — we'll confirm availability and shipping within the hour.
+            </p>
+        </div>
+
+        <div class="variant">
+            <p class="variant__label">Choose your Stadium — <span id="variantName">Manchester United</span></p>
+            <div class="variant__grid" id="variantGrid"></div>
+        </div>
+
+        <!-- <a class="btn-order js-order-link" href="https://t.me/stadiumcraftreviews" target="_blank" rel="noopener">
+            Order Now for Your Club
+        </a> -->
+        <p class="order-note">We don't take payment on this page — tap above to order directly with our team.</p>
+
+        <div class="trust-badges">
+            <div class="trust-badges__item">
+                <span class="trust-badges__icon">🚚</span>
+                <span>Fast shipping</span>
+            </div>
+            <div class="trust-badges__item">
+                <span class="trust-badges__icon">🪵</span>
+                <span>Solid hardwood base</span>
+            </div>
+            <div class="trust-badges__item">
+                <span class="trust-badges__icon">💡</span>
+                <span>Remote-controlled LEDs</span>
+            </div>
+            <div class="trust-badges__item">
+                <span class="trust-badges__icon">🔒</span>
+                <span>Safe, tracked delivery</span>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion__item">
+                <button class="accordion__header" aria-expanded="false">
+                    <span>Specifications &amp; dimensions</span>
+                    <span class="accordion__icon">+</span>
+                </button>
+                <div class="accordion__body">
+                    <ul>
+                        <li><strong>Dimensions:</strong> 120cm × 60cm × 45cm — standard living-room coffee-table size</li>
+                        <li><strong>Glass surface:</strong> 8mm tempered safety glass</li>
+                        <li><strong>Lighting:</strong> integrated, app- and remote-controlled LED strips</li>
+                        <li><strong>Power:</strong> detachable 2-metre USB-C cable included</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion__item">
+                <button class="accordion__header" aria-expanded="false">
+                    <span>Shipping &amp; returns</span>
+                    <span class="accordion__icon">+</span>
+                </button>
+                <div class="accordion__body">
+                    <p>Every table ships in a shock-absorbent, custom-built crate. Delivery takes 7–12 business days with live tracking. If it doesn't suit your room, send it back within 30 days for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Reviews -->
+    <section class="reviews" aria-label="Customer reviews">
+        <div class="reviews__inner">
+            <h2 class="reviews__title">What fans are saying</h2>
+
+            <div class="reviews__grid">
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"It's become the first thing everyone notices walking into the room. My mates thought I'd had it custom-built."</p>
+                    <p class="review-card__name">Daniel R. — Manchester United</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Even better in person than the photos. The seating detail up close is honestly a little mad."</p>
+                    <p class="review-card__name">Priya K. — Arsenal</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Ordered through Telegram, had questions answered same day, table arrived exactly as described."</p>
+                    <p class="review-card__name">Marcus T. — Liverpool</p>
+                </article>
+            </div>
+
+            <div class="reviews__grid reviews__grid--compact">
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"The lighting at night is what sold me, but the build quality is what kept me impressed."</p>
+                    <p class="review-card__name">Sofia L. — Chelsea</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Packaging was solid, nothing shifted in transit, and it was surprisingly easy to set up alone."</p>
+                    <p class="review-card__name">Enzo H. — Manchester City</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Better than I hoped. Every little detail in the stands is genuinely there if you look."</p>
+                    <p class="review-card__name">Bob N. — Tottenham</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Bought this for my dad's birthday. He hasn't stopped talking about it since. Worth every penny."</p>
+                    <p class="review-card__name">James W. — Newcastle</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Was skeptical about ordering from Telegram, but Anna was professional and the tracking was accurate."</p>
+                    <p class="review-card__name">Chloe M. — Aston Villa</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"The LED remote is a nice touch. I can change the color to match the team we're playing that weekend."</p>
+                    <p class="review-card__name">Ryan P. — West Ham</p>
+                </article>
+
+                <article class="review-card">
+                    <span class="review-card__mark" aria-hidden="true">”</span>
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <p class="review-card__quote">"Solid piece of furniture. Doesn't feel cheap at all. The glass is thick and the wood base is heavy."</p>
+                    <p class="review-card__name">Aisha B. — Everton</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-label="Frequently asked questions">
+        <div class="faq__inner">
+            <h2 class="faq__title">Common questions</h2>
+            <div class="faq__list" id="faqList">
+                <div class="accordion__item">
+                    <button class="accordion__header" aria-expanded="false">
+                        <span>Is the stadium a real 3D model or a printed photo?</span>
+                        <span class="accordion__icon">+</span>
+                    </button>
+                    <div class="accordion__body">
+                        <p>It's a fully sculpted miniature — seating tiers, roof structure and pitch are all built in physical relief under the glass, then lit from within. Nothing is a flat print.</p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="accordion__header" aria-expanded="false">
+                        <span>Can you build a stadium that isn't listed here?</span>
+                        <span class="accordion__icon">+</span>
+                    </button>
+                    <div class="accordion__body">
+                        <p>Yes. Message us on Telegram with the club and stadium you support, and we'll confirm feasibility and a price before you commit to anything.</p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="accordion__header" aria-expanded="false">
+                        <span>How does the lighting work?</span>
+                        <span class="accordion__icon">+</span>
+                    </button>
+                    <div class="accordion__body">
+                        <p>Low-voltage LED strips are built into the frame and stadium bowl, controlled by an included remote so you can dim, change color, or switch the lights off entirely.</p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="accordion__header" aria-expanded="false">
+                        <span>Why isn't there a checkout on this page?</span>
+                        <span class="accordion__icon">+</span>
+                    </button>
+                    <div class="accordion__body">
+                        <p>We handle every order personally so we can confirm your stadium, shipping address and timeline before production starts. Tap "Order Now on Telegram" and we'll take it from there.</p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <button class="accordion__header" aria-expanded="false">
+                        <span>What's your return policy?</span>
+                        <span class="accordion__icon">+</span>
+                    </button>
+                    <div class="accordion__body">
+                        <p>30 days, no questions asked. If it doesn't fit your space or your taste, we'll arrange a return and refund.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-sticky">
+        <a class="btn-order js-order-link" href="https://t.me/yourchannelusername" target="_blank" rel="noopener">Order Now</a>
+    </div>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> StadiumCraft. Handmade to order.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
