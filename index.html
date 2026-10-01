@@ -90,9 +90,6 @@
             <div class="variant__grid" id="variantGrid"></div>
         </div>
 
-        <!-- <a class="btn-order js-order-link" href="https://t.me/stadiumcraftreviews" target="_blank" rel="noopener">
-            Order Now for Your Club
-        </a> -->
         <p class="order-note">We don't take payment on this page — tap above to order directly with our team.</p>
 
         <div class="trust-badges">
@@ -279,6 +276,29 @@
 
     <div class="mobile-sticky">
         <a class="btn-order js-order-link" href="https://t.me/yourchannelusername" target="_blank" rel="noopener">Order Now</a>
+    </div>
+
+    <!-- Modal — Telegram redirect confirmation -->
+    <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle" aria-describedby="orderModalText">
+        <div class="modal">
+            <button class="modal__close" id="modalCloseBtn" aria-label="Close dialog">×</button>
+            <div class="modal__icon">✈️</div>
+            <span class="modal__badge">Secure ordering on Telegram</span>
+            <h3 class="modal__title" id="orderModalTitle">You're one step away from your stadium table</h3>
+            <p class="modal__text" id="orderModalText">
+                We're taking you to our <strong>Telegram chat</strong> to finish your order. 
+                It's how we confirm your club, shipping address and timeline in real time — 
+                and you'll get a <strong>personal reply within the hour</strong> so nothing is left to chance.
+            </p>
+            <div class="modal__actions">
+                <a class="modal__btn modal__btn--primary" id="modalProceedBtn" href="https://t.me/stadiumcraftreviews" target="_blank" rel="noopener">
+                    Continue to Telegram
+                </a>
+                <button class="modal__btn modal__btn--secondary" id="modalCancelBtn">
+                    Not yet — keep browsing
+                </button>
+            </div>
+        </div>
     </div>
 
     <footer class="site-footer">
