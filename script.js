@@ -3,49 +3,49 @@
 // ==========================================================
 
 // Change this one line to your real Telegram channel/bot link
-const TELEGRAM_LINK = "https://t.me/stadiumcraftreviews";
+const TELEGRAM_LINK = "https://t.me/StadiumCraft";
 
 // ---- Product data --------------------------------------------------
 const VARIANTS = [
     {
         id: "man-utd",
         name: "Manchester United",
-        swatch: "man-u.jpeg",
+        swatch: "image/man-u.jpeg",
         price: 149.99,
         compare: 299.99,
-        images: ["man-u.jpeg"],
+        images: ["image/man-u.jpeg"],
     },
     {
         id: "liverpool",
         name: "Liverpool",
-        swatch: "liverpool.jpg",
+        swatch: "image/liverpool.jpg",
         price: 149.99,
         compare: 299.99,
-        images: ["liverpool.jpg"],
+        images: ["image/liverpool.jpg"],
     },
     {
         id: "chelsea",
         name: "Chelsea",
-        swatch: "chelsea.jpeg",
+        swatch: "image/chelsea.jpeg",
         price: 149.99,
         compare: 299.99,
-        images: ["chelsea.jpeg"],
+        images: ["image/chelsea.jpeg"],
     },
     {
         id: "man-city",
         name: "Manchester City",
-        swatch: "man-city.jpg",
+        swatch: "image/man-city.jpg",
         price: 149.99,
         compare: 299.99,
-        images: ["man-city.jpg"],
+        images: ["image/man-city.jpg"],
     },
     {
         id: "tottenham",
         name: "Tottenham",
-        swatch: "spurs.jpeg",
+        swatch: "image/spurs.jpeg",
         price: 149.99,
         compare: 299.99,
-        images: ["spurs.jpeg"],
+        images: ["image/spurs.jpeg"],
     }
 ];
 
@@ -233,10 +233,67 @@ document.querySelectorAll(".accordion__header").forEach((header) => {
 });
 
 // ==========================================================
-// ORDER LINKS
+// ORDER LINKS + MODAL
 // ==========================================================
 document.querySelectorAll(".js-order-link").forEach((el) => {
     el.href = TELEGRAM_LINK;
+});
+
+// Modal elements
+const modal = document.getElementById("orderModal");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
+const modalCancelBtn = document.getElementById("modalCancelBtn");
+const modalProceedBtn = document.getElementById("modalProceedBtn");
+
+// Remember the original target URL
+let currentOrderUrl = TELEGRAM_LINK;
+
+// Open modal
+function openModal(orderUrl) {
+    currentOrderUrl = orderUrl || TELEGRAM_LINK;
+    modalProceedBtn.href = currentOrderUrl;
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+}
+
+// Close modal
+function closeModal() {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+}
+
+// Intercept all order link clicks
+document.querySelectorAll(".js-order-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = link.getAttribute("href") || TELEGRAM_LINK;
+        openModal(url);
+    });
+});
+
+// Close on X button
+modalCloseBtn.addEventListener("click", closeModal);
+
+// Close on "Not yet" button
+modalCancelBtn.addEventListener("click", closeModal);
+
+// Close on overlay click (outside modal)
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+});
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+    }
+});
+
+// Close modal after proceeding (with slight delay so link opens first)
+modalProceedBtn.addEventListener("click", () => {
+    setTimeout(() => {
+        closeModal();
+    }, 400);
 });
 
 // ==========================================================
