@@ -233,30 +233,26 @@ document.querySelectorAll(".accordion__header").forEach((header) => {
 });
 
 // ==========================================================
-// ORDER LINKS + MODAL
+// ORDER LINKS
 // ==========================================================
 document.querySelectorAll(".js-order-link").forEach((el) => {
     el.href = TELEGRAM_LINK;
 });
 
-// Modal elements
+// ==========================================================
+// MODAL — Telegram redirect confirmation
+// ==========================================================
 const modal = document.getElementById("orderModal");
 const modalCloseBtn = document.getElementById("modalCloseBtn");
 const modalCancelBtn = document.getElementById("modalCancelBtn");
 const modalProceedBtn = document.getElementById("modalProceedBtn");
 
-// Remember the original target URL
-let currentOrderUrl = TELEGRAM_LINK;
-
-// Open modal
 function openModal(orderUrl) {
-    currentOrderUrl = orderUrl || TELEGRAM_LINK;
-    modalProceedBtn.href = currentOrderUrl;
+    modalProceedBtn.href = orderUrl || TELEGRAM_LINK;
     modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
 }
 
-// Close modal
 function closeModal() {
     modal.classList.remove("is-open");
     document.body.style.overflow = "";
@@ -277,7 +273,7 @@ modalCloseBtn.addEventListener("click", closeModal);
 // Close on "Not yet" button
 modalCancelBtn.addEventListener("click", closeModal);
 
-// Close on overlay click (outside modal)
+// Close on overlay click
 modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
 });
@@ -289,7 +285,7 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// Close modal after proceeding (with slight delay so link opens first)
+// Close modal after proceeding
 modalProceedBtn.addEventListener("click", () => {
     setTimeout(() => {
         closeModal();
