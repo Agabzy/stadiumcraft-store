@@ -14,7 +14,7 @@ const VARIANTS = [
         swatch: "./man-u.jpeg",
         price: 649.99,
         compare: 1299.99,
-        images: ["./man-u.jpeg"],
+        images: ["man-u.jpeg"],
     },
     {
         id: "liverpool",
@@ -22,7 +22,7 @@ const VARIANTS = [
         swatch: "./liverpool.jpg",
         price: 649.99,
         compare: 1299.99,
-        images: ["./liverpool.jpg"],
+        images: ["liverpool.jpg"],
     },
     {
         id: "chelsea",
@@ -30,7 +30,7 @@ const VARIANTS = [
         swatch: "./chelsea.jpeg",
         price: 649.99,
         compare: 1299.99,
-        images: ["./chelsea.jpeg"],
+        images: ["chelsea.jpeg"],
     },
     {
         id: "man-city",
@@ -38,7 +38,7 @@ const VARIANTS = [
         swatch: "./man-city.jpg",
         price: 649.99,
         compare: 1299.99,
-        images: ["./man-city.jpg"],
+        images: ["man-city.jpg"],
     },
     {
         id: "tottenham",
